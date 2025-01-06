@@ -10,7 +10,9 @@ const router = express.Router();
 router.get('/balance', async (req, res) => {
     try {
         const balance = await fetchBalance(WALLET_ADDRESS);
+        console.log(`💰 Current Balance: ${balance} ETH`);
         await saveWalletBalance(balance);
+        console.log(`💰 Current Balance: ${balance} ETH`);
         res.json({ wallet: WALLET_ADDRESS, balance: `${balance} ETH` });
     } catch (error) {
         res.status(500).json({ error: 'Error fetching wallet balance.' });
