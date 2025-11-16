@@ -1,19 +1,30 @@
 {
   "name": "wallet-tracker",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "start": "node app.js",
+    "dev": "nodemon app.js"
   },
-  "keywords": [],
+  "keywords": ["blockchain", "wallet-tracker", "multi-chain", "ethereum", "solana", "bitcoin", "defi", "ai-analysis"],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "Multi-chain wallet tracker with AI-powered transaction analysis for degen wallets",
   "dependencies": {
     "axios": "^1.7.9",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
-    "pg": "^8.13.1"
+    "pg": "^8.13.1",
+    "@solana/web3.js": "^1.87.6",
+    "bitcoinjs-lib": "^6.1.5",
+    "ethers": "^6.9.0",
+    "web3": "^4.3.0",
+    "cors": "^2.8.5",
+    "node-cache": "^5.1.2",
+    "@anthropic-ai/sdk": "^0.17.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
   }
 }
